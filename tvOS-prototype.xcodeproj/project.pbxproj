@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200A854C1C0200B200477933 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200A854B1C0200B200477933 /* InitialViewController.swift */; };
+		202529801C02079E00929C1F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2025297F1C02079E00929C1F /* AVKit.framework */; };
+		202529841C0216E800929C1F /* test-landscape.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 202529831C0216E800929C1F /* test-landscape.mp4 */; };
 		208BDCFE1BFE6310008E4EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BDCFD1BFE6310008E4EA1 /* AppDelegate.swift */; };
-		208BDD001BFE6310008E4EA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BDCFF1BFE6310008E4EA1 /* ViewController.swift */; };
+		208BDD001BFE6310008E4EA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BDCFF1BFE6310008E4EA1 /* MainViewController.swift */; };
 		208BDD031BFE6310008E4EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208BDD011BFE6310008E4EA1 /* Main.storyboard */; };
 		208BDD051BFE6310008E4EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208BDD041BFE6310008E4EA1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200A854B1C0200B200477933 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		2025297F1C02079E00929C1F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		202529831C0216E800929C1F /* test-landscape.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "test-landscape.mp4"; sourceTree = "<group>"; };
 		208BDCFA1BFE6310008E4EA1 /* tvOS-prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvOS-prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		208BDCFD1BFE6310008E4EA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		208BDCFF1BFE6310008E4EA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		208BDCFF1BFE6310008E4EA1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		208BDD021BFE6310008E4EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		208BDD041BFE6310008E4EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		208BDD061BFE6310008E4EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,15 +33,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202529801C02079E00929C1F /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		200A854D1C0201D100477933 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				202529831C0216E800929C1F /* test-landscape.mp4 */,
+				208BDD041BFE6310008E4EA1 /* Assets.xcassets */,
+				208BDD011BFE6310008E4EA1 /* Main.storyboard */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		2025297E1C02075700929C1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2025297F1C02079E00929C1F /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		208BDCF11BFE6310008E4EA1 = {
 			isa = PBXGroup;
 			children = (
+				2025297E1C02075700929C1F /* Frameworks */,
 				208BDCFC1BFE6310008E4EA1 /* tvOS-prototype */,
 				208BDCFB1BFE6310008E4EA1 /* Products */,
 			);
@@ -52,11 +78,11 @@
 		208BDCFC1BFE6310008E4EA1 /* tvOS-prototype */ = {
 			isa = PBXGroup;
 			children = (
-				208BDCFD1BFE6310008E4EA1 /* AppDelegate.swift */,
-				208BDCFF1BFE6310008E4EA1 /* ViewController.swift */,
-				208BDD011BFE6310008E4EA1 /* Main.storyboard */,
-				208BDD041BFE6310008E4EA1 /* Assets.xcassets */,
+				200A854D1C0201D100477933 /* Assets */,
 				208BDD061BFE6310008E4EA1 /* Info.plist */,
+				208BDCFD1BFE6310008E4EA1 /* AppDelegate.swift */,
+				200A854B1C0200B200477933 /* InitialViewController.swift */,
+				208BDCFF1BFE6310008E4EA1 /* MainViewController.swift */,
 			);
 			path = "tvOS-prototype";
 			sourceTree = "<group>";
@@ -119,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202529841C0216E800929C1F /* test-landscape.mp4 in Resources */,
 				208BDD051BFE6310008E4EA1 /* Assets.xcassets in Resources */,
 				208BDD031BFE6310008E4EA1 /* Main.storyboard in Resources */,
 			);
@@ -131,7 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				208BDD001BFE6310008E4EA1 /* ViewController.swift in Sources */,
+				200A854C1C0200B200477933 /* InitialViewController.swift in Sources */,
+				208BDD001BFE6310008E4EA1 /* MainViewController.swift in Sources */,
 				208BDCFE1BFE6310008E4EA1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +302,7 @@
 				208BDD0B1BFE6310008E4EA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
