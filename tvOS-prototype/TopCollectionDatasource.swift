@@ -1,5 +1,5 @@
 //
-//  TopCarouselDatasource.swift
+//  TopCollectionDatasource.swift
 //  tvOS-prototype
 //
 //  Created by Adriano Goncalves on 22/11/2015.

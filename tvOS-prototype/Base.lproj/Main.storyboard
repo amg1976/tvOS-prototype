@@ -95,45 +95,27 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="qYO-Hs-Ciy"/>
                                 </connections>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pbd-KD-HQ4">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMA-yW-3b1" customClass="iCarousel">
                                 <rect key="frame" x="20" y="500" width="1880" height="580"/>
                                 <animations/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xaX-Id-R93">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="EUB-rE-7Qw">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <animations/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pbd-KD-HQ4" secondAttribute="bottom" id="7qD-Fz-a7O"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pbd-KD-HQ4" secondAttribute="trailing" id="Dn3-bg-q5s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dMA-yW-3b1" secondAttribute="trailing" id="5Ag-CQ-ZcG"/>
+                            <constraint firstItem="dMA-yW-3b1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ivf-wi-x4w"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dMA-yW-3b1" secondAttribute="bottom" id="SIC-dw-jtU"/>
                             <constraint firstItem="j5U-nT-BRp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="WNv-kv-MoU"/>
                             <constraint firstItem="j5U-nT-BRp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Yqh-kw-9Fi"/>
-                            <constraint firstItem="pbd-KD-HQ4" firstAttribute="top" secondItem="j5U-nT-BRp" secondAttribute="bottom" id="dFd-Ck-soI"/>
-                            <constraint firstItem="pbd-KD-HQ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eA9-f0-cIS"/>
+                            <constraint firstItem="dMA-yW-3b1" firstAttribute="top" secondItem="j5U-nT-BRp" secondAttribute="bottom" id="d1h-dI-Cpl"/>
                             <constraint firstItem="j5U-nT-BRp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tyo-gV-r7C"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mainCollection" destination="pbd-KD-HQ4" id="aU5-Ns-xEx"/>
-                        <outlet property="topCarousel" destination="j5U-nT-BRp" id="p3b-kj-gYU"/>
+                        <outlet property="mainCollection" destination="dMA-yW-3b1" id="cpu-Dc-UOb"/>
+                        <outlet property="topCollection" destination="j5U-nT-BRp" id="omD-cI-Lbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

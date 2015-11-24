@@ -18,12 +18,21 @@ class ImageCell: UICollectionViewCell {
 
 class MainViewController: UIViewController {
 
-   @IBOutlet weak private var topCarousel: InfiniteCarousel!
-   @IBOutlet weak private var mainCollection: UICollectionView!
+   @IBOutlet weak private var topCollection: InfiniteCarousel!
+   @IBOutlet weak private var mainCollection: iCarousel!
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      topCarousel.dataSource = self
+      mainCollection.dataSource = self
+      mainCollection.delegate = self
+      mainCollection.type = .CoverFlow
+      mainCollection.pagingEnabled = true
+   }
+}
+
+extension iCarousel {
+   public override func canBecomeFocused() -> Bool {
+      return true
    }
 }
 
