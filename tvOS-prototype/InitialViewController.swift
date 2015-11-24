@@ -36,8 +36,10 @@ class InitialViewController: UIViewController {
    //MARK: InitialViewController
    
    func playerItemDidEnd(notification: NSNotification) {
-      showBackground()
+      self.showMainViewController()
    }
+   
+   //MARK: private methods
    
    private func setupUI() {
       launchImage.image = UIImage(named: "launch")
@@ -94,6 +96,11 @@ class InitialViewController: UIViewController {
       let alert = UIAlertController(title: "Unexpected error", message: "Found an error on the app, sorry!", preferredStyle: .Alert)
       alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
       self.presentViewController(alert, animated: true, completion: nil)
+   }
+   
+   private func showMainViewController() {
+      let segueIdentifier = "ShowMainController"
+      self.performSegueWithIdentifier(segueIdentifier, sender: self)
    }
 
 }

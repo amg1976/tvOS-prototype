@@ -9,22 +9,29 @@
 /* Begin PBXBuildFile section */
 		200A854C1C0200B200477933 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200A854B1C0200B200477933 /* InitialViewController.swift */; };
 		202529801C02079E00929C1F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2025297F1C02079E00929C1F /* AVKit.framework */; };
-		202529841C0216E800929C1F /* test-landscape.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 202529831C0216E800929C1F /* test-landscape.mp4 */; };
+		2025298F1C02411C00929C1F /* TopCarouselDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025298E1C02411C00929C1F /* TopCarouselDatasource.swift */; };
+		202529921C02420100929C1F /* TopCarouselDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202529911C02420100929C1F /* TopCarouselDelegate.swift */; };
+		2025299B1C02436400929C1F /* test-landscape.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 202529961C02436400929C1F /* test-landscape.mp4 */; };
+		2025299C1C02436400929C1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202529971C02436400929C1F /* Assets.xcassets */; };
+		202529B91C050E1000929C1F /* InfiniteCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202529B81C050E1000929C1F /* InfiniteCarousel.swift */; };
 		208BDCFE1BFE6310008E4EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BDCFD1BFE6310008E4EA1 /* AppDelegate.swift */; };
 		208BDD001BFE6310008E4EA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BDCFF1BFE6310008E4EA1 /* MainViewController.swift */; };
 		208BDD031BFE6310008E4EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208BDD011BFE6310008E4EA1 /* Main.storyboard */; };
-		208BDD051BFE6310008E4EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208BDD041BFE6310008E4EA1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		200A854B1C0200B200477933 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		2025297F1C02079E00929C1F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		202529831C0216E800929C1F /* test-landscape.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "test-landscape.mp4"; sourceTree = "<group>"; };
+		202529871C023E8D00929C1F /* tvOS-prototype-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tvOS-prototype-Bridging-Header.h"; sourceTree = "<group>"; };
+		2025298E1C02411C00929C1F /* TopCarouselDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCarouselDatasource.swift; sourceTree = "<group>"; };
+		202529911C02420100929C1F /* TopCarouselDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCarouselDelegate.swift; sourceTree = "<group>"; };
+		202529961C02436400929C1F /* test-landscape.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test-landscape.mp4"; path = "Assets/test-landscape.mp4"; sourceTree = "<group>"; };
+		202529971C02436400929C1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets/Assets.xcassets; sourceTree = "<group>"; };
+		202529B81C050E1000929C1F /* InfiniteCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfiniteCarousel.swift; path = External/InfiniteCarousel.swift; sourceTree = "<group>"; };
 		208BDCFA1BFE6310008E4EA1 /* tvOS-prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvOS-prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		208BDCFD1BFE6310008E4EA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		208BDCFF1BFE6310008E4EA1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		208BDD021BFE6310008E4EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		208BDD041BFE6310008E4EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		208BDD061BFE6310008E4EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,8 +50,8 @@
 		200A854D1C0201D100477933 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				202529831C0216E800929C1F /* test-landscape.mp4 */,
-				208BDD041BFE6310008E4EA1 /* Assets.xcassets */,
+				202529961C02436400929C1F /* test-landscape.mp4 */,
+				202529971C02436400929C1F /* Assets.xcassets */,
 				208BDD011BFE6310008E4EA1 /* Main.storyboard */,
 			);
 			name = Assets;
@@ -56,6 +63,50 @@
 				2025297F1C02079E00929C1F /* AVKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		202529851C023E6B00929C1F /* External */ = {
+			isa = PBXGroup;
+			children = (
+				202529B81C050E1000929C1F /* InfiniteCarousel.swift */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		2025298B1C023EA300929C1F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				208BDD061BFE6310008E4EA1 /* Info.plist */,
+				202529871C023E8D00929C1F /* tvOS-prototype-Bridging-Header.h */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		2025298C1C0240E100929C1F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2025298D1C0240FB00929C1F /* Datasources */,
+				202529901C0241E500929C1F /* Delegates */,
+				200A854B1C0200B200477933 /* InitialViewController.swift */,
+				208BDCFF1BFE6310008E4EA1 /* MainViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2025298D1C0240FB00929C1F /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				2025298E1C02411C00929C1F /* TopCarouselDatasource.swift */,
+			);
+			name = Datasources;
+			sourceTree = "<group>";
+		};
+		202529901C0241E500929C1F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				202529911C02420100929C1F /* TopCarouselDelegate.swift */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		208BDCF11BFE6310008E4EA1 = {
@@ -78,11 +129,11 @@
 		208BDCFC1BFE6310008E4EA1 /* tvOS-prototype */ = {
 			isa = PBXGroup;
 			children = (
-				200A854D1C0201D100477933 /* Assets */,
-				208BDD061BFE6310008E4EA1 /* Info.plist */,
 				208BDCFD1BFE6310008E4EA1 /* AppDelegate.swift */,
-				200A854B1C0200B200477933 /* InitialViewController.swift */,
-				208BDCFF1BFE6310008E4EA1 /* MainViewController.swift */,
+				200A854D1C0201D100477933 /* Assets */,
+				2025298C1C0240E100929C1F /* Controllers */,
+				202529851C023E6B00929C1F /* External */,
+				2025298B1C023EA300929C1F /* Support Files */,
 			);
 			path = "tvOS-prototype";
 			sourceTree = "<group>";
@@ -145,8 +196,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				202529841C0216E800929C1F /* test-landscape.mp4 in Resources */,
-				208BDD051BFE6310008E4EA1 /* Assets.xcassets in Resources */,
+				2025299B1C02436400929C1F /* test-landscape.mp4 in Resources */,
+				2025299C1C02436400929C1F /* Assets.xcassets in Resources */,
 				208BDD031BFE6310008E4EA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202529B91C050E1000929C1F /* InfiniteCarousel.swift in Sources */,
+				202529921C02420100929C1F /* TopCarouselDelegate.swift in Sources */,
 				200A854C1C0200B200477933 /* InitialViewController.swift in Sources */,
+				2025298F1C02411C00929C1F /* TopCarouselDatasource.swift in Sources */,
 				208BDD001BFE6310008E4EA1 /* MainViewController.swift in Sources */,
 				208BDCFE1BFE6310008E4EA1 /* AppDelegate.swift in Sources */,
 			);
@@ -264,10 +318,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "tvOS-prototype/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amg.tvOS-prototype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tvOS-prototype/tvOS-prototype-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -276,10 +333,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "tvOS-prototype/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amg.tvOS-prototype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tvOS-prototype/tvOS-prototype-Bridging-Header.h";
 			};
 			name = Release;
 		};

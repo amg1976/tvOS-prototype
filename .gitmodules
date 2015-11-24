@@ -1,0 +1,3 @@
+[submodule "tvOS-prototype/External/iCarousel"]
+	path = tvOS-prototype/External/iCarousel
+	url = https://github.com/nicklockwood/iCarousel.git
