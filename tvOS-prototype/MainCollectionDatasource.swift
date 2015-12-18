@@ -8,27 +8,16 @@
 
 import UIKit
 
-extension MainViewController: iCarouselDataSource {
-
-   func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
+extension MainViewController: UICollectionViewDataSource {
+   
+   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
       return 3
    }
    
-   func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
-      let image = UIImage(named: "Baby \(index+1)")
-      let imageView = UIImageView(image: image)
-      let view = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: image!.size))
-      view.addSubview(imageView)
-      return view
+   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+      let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ImageCell.cellIdentifier, forIndexPath: indexPath) as! ImageCell
+      cell.imageView.image = UIImage(named: "Baby \(indexPath.item%3 + 1)")
+      return cell
    }
    
-}
-
-extension MainViewController: iCarouselDelegate {
-   func carousel(carousel: iCarousel, valueForOption option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
-      switch option {
-      case .Wrap: return 1.0
-      default: return value
-      }
-   }
 }
