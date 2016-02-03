@@ -16,11 +16,13 @@ class ImageCell: UICollectionViewCell {
    
 }
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, FlowViewController {
 
    @IBOutlet weak private var topCollection: InfiniteCarousel!
    @IBOutlet weak private var mainCollection: iCarousel!
    
+   weak var flowController: FlowController?
+
    override func viewDidLoad() {
       super.viewDidLoad()
       mainCollection.dataSource = self

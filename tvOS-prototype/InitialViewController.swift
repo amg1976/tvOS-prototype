@@ -9,9 +9,15 @@
 import UIKit
 import AVKit
 
-class InitialViewController: UIViewController {
+protocol FlowViewController {
+   weak var flowController: FlowController? { get set }
+}
 
+class InitialViewController: UIViewController, FlowViewController {
+   
    @IBOutlet weak private var launchImage: UIImageView!
+
+   weak var flowController: FlowController?
    
    private let playerStatusObserverContext = UnsafeMutablePointer<Void>()
    private var player: AVPlayer!
@@ -46,7 +52,7 @@ class InitialViewController: UIViewController {
    }
    
    private func loadPlayer() {
-
+      
       guard let path = NSBundle.mainBundle().pathForResource("test-landscape", ofType: "mp4") else {
          return
       }
@@ -59,7 +65,7 @@ class InitialViewController: UIViewController {
          }
          playerLayer = AVPlayerLayer(player: player)
       }
-
+      
       guard let playerLayer = playerLayer else {
          return
       }
@@ -68,7 +74,7 @@ class InitialViewController: UIViewController {
          playerLayer.frame = view.frame
          view.layer.insertSublayer(playerLayer, below: launchImage.layer)
       }
-
+      
    }
    
    private func playVideo() {
@@ -99,8 +105,9 @@ class InitialViewController: UIViewController {
    }
    
    private func showMainViewController() {
-      let segueIdentifier = "ShowMainController"
-      self.performSegueWithIdentifier(segueIdentifier, sender: self)
+      if let controller = flowController as? MainFlowController {
+         controller.presentMainScreen()
+      }
    }
-
+   
 }
